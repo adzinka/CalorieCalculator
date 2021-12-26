@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_rectangle"
+    tools:context=".fragments.addProduct.AddProductFragment">
+
+    <View
+        android:layout_width="285dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/oval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="222dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="245dp"
+        android:layout_height="237dp"
+        android:layout_marginEnd="-55dp"
+        android:layout_marginBottom="276dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="363dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_to_product_list" />
+
+    <TextView
+        android:id="@+id/add_to_product_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_product_list"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Название"
+        android:backgroundTint="@color/background_green"
+        android:maxLength="27"
+        app:hintTextColor="@color/background_green"
+        android:textColorHint="@color/background_green"
+        app:boxStrokeColor="@color/background_green"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintStart_toStartOf="@id/rectangle"
+        app:layout_constraintTop_toTopOf="@id/rectangle"/>
+
+    <EditText
+        android:id="@+id/proteins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Белки"
+        android:maxLength="4"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:hintTextColor="@color/background_green"
+        android:textColorHint="@color/background_green"
+        android:backgroundTint="@color/background_green"
+        app:layout_constraintEnd_toStartOf="@+id/fats"
+        app:layout_constraintStart_toStartOf="@id/rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+    <EditText
+        android:id="@+id/fats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Жиры"
+        android:maxLength="4"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        app:hintTextColor="@color/background_green"
+        android:backgroundTint="@color/background_green"
+        android:textColorHint="@color/background_green"
+        app:layout_constraintStart_toEndOf="@id/proteins"
+        app:layout_constraintEnd_toStartOf="@id/carbohydrates"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/carbohydrates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Углев"
+        android:maxLength="4"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:hintTextColor="@color/background_green"
+        android:textColorHint="@color/background_green"
+        android:backgroundTint="@color/background_green"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintStart_toEndOf="@id/fats"
+        app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+    <EditText
+        android:id="@+id/calories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="number"
+        android:hint="Калории"
+        android:maxLength="4"
+        app:hintTextColor="@color/background_green"
+        android:textColorHint="@color/background_green"
+        android:backgroundTint="@color/background_green"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintStart_toStartOf="@id/rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/fats" />
+
+    <Button
+        android:id="@+id/add_product_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:text="Сохранить"
+        android:backgroundTint="@color/background_green"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/calories" />
+</androidx.constraintlayout.widget.ConstraintLayout>

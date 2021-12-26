@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_rectangle"
+    tools:context=".fragments.addRation.AddRationFragment">
+
+
+    <View
+        android:layout_width="285dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginStart="-5dp"
+        android:background="@drawable/oval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="-80dp"
+        android:layout_marginBottom="-42dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="238dp"
+        android:layout_height="237dp"
+        android:layout_marginEnd="-25dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/oval"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="290dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="Name"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/carbohydrates"
+        app:layout_constraintStart_toStartOf="@+id/proteins"
+        app:layout_constraintTop_toTopOf="@id/rectangle" />
+
+    <TextView
+        android:id="@+id/calories_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Calories"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/background_green"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintStart_toStartOf="@id/rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <Button
+        android:id="@+id/add_ration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/background_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Введите вес"
+        android:layout_marginBottom="200dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/add_ration" />
+
+    <TextView
+        android:id="@+id/proteins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        android:text="@string/proteins"
+        android:textColor="@color/white"
+        android:background="@color/background_green"
+        android:padding="3dp"
+        app:layout_constraintStart_toStartOf="@id/rectangle"
+        app:layout_constraintEnd_toStartOf="@+id/fats"
+        app:layout_constraintTop_toBottomOf="@+id/calories_weight"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle"/>
+
+    <TextView
+        android:id="@+id/fats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fats"
+        android:textColor="@color/white"
+        android:background="@color/background_green"
+        android:padding="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/carbohydrates"
+        app:layout_constraintStart_toEndOf="@+id/proteins"
+        app:layout_constraintTop_toBottomOf="@+id/calories_weight"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle"/>
+
+    <TextView
+        android:id="@+id/carbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Carbohydrates"
+        android:textColor="@color/white"
+        android:background="@color/background_green"
+        android:padding="3dp"
+        app:layout_constraintStart_toEndOf="@+id/fats"
+        app:layout_constraintEnd_toEndOf="@id/rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/calories_weight"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
